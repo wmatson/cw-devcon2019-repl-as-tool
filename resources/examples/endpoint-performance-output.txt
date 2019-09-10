@@ -1,0 +1,8 @@
+                     pId     nCalls        Min      50% ≤      90% ≤      95% ≤      99% ≤        Max       Mean   MAD       Total   Clock
+
+    :rawsp/large-request         20   945.15ms     1.05s      1.10s      1.11s      1.13s      1.13s      1.04s    ±4%     20.72s      58%
+:rawsp/source-partitions         20   381.04ms   411.73ms   424.79ms   507.61ms   540.62ms   540.62ms   416.96ms   ±5%      8.34s      23%
+   :rawsp/sec-partitions         20   209.10ms   305.10ms   441.57ms   444.24ms   453.98ms   453.98ms   296.50ms  ±22%      5.93s      16%
+
+               Accounted                                                                                                   34.99s      97%
+                   Clock                                                                                                   36.01s     100%

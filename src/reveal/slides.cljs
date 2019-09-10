@@ -1,4 +1,5 @@
 (ns reveal.slides
+  (:require-macros [reveal.macros :refer [slurp-resource]])
   (:require [reveal.example-data :as ed]
             [reveal.klipse :as rk]
             [reveal.vendored-medley :as vm]
@@ -44,10 +45,25 @@
                          (:require [cheshire.core :as json]
                                    [clj-http.client :as http]
                                    [medley.core :as medley])))]]]])
+
+(def slide-4
+  [:section
+   [:section
+    [:h2 "A Case Study"]
+    [:p "Endpoint Performance"]]
+   [:section
+    [:pre.stretch {:style "font-size: .42em;"}
+     [:code {:data-line-numbers ""}
+      (slurp-resource "examples/endpoint-performance.clj")]]]
+   [:section
+    [:pre {:style "font-size: .31em; width: 100%;"}
+     [:code (slurp-resource "examples/endpoint-performance-output.txt")]]]])
+               
  
 (defn all
   "Add here all slides you want to see in your presentation."
   []
   [slide-1
    slide-2
-   slide-3])
+   slide-3
+   slide-4])
