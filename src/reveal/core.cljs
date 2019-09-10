@@ -5,15 +5,15 @@
             [hiccups.runtime :as hiccupsrt]
             [reveal.slides :as slides]))
 
-
 ;; When changing comments, you manually need to refresh your browser
 (def options (clj->js {:controls    true
                        :progress    true
                        :transition  "slide"                    ; e.g. none/fade/slide/convex/concave/zoom
                        :slideNumber false
                        :dependencies [{:src "node_modules/reveal.js/plugin/notes/notes.js"
+                                       :async true}
+                                      {:src "node_modules/reveal.js/plugin/highlight/highlight.js"
                                        :async true}]}))
-
 
 ;; -----------------------------------------------------------------------------
 ;; You do not need to change anything below this comment

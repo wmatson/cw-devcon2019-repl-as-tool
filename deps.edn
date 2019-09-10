@@ -3,6 +3,7 @@
         com.bhauman/figwheel-main {:mvn/version "0.2.0"}
         com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
         org.clojure/core.async {:mvn/version "0.4.490"}
+        medley {:mvn/version "1.2.0"}
         viebel/klipse {:mvn/version "7.9.1"}
         hiccups {:mvn/version "0.3.0"}}
  :paths ["src" "target" "resources"]
