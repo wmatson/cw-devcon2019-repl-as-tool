@@ -12,7 +12,7 @@
       (pp/pprint quoted-code))))
                  
 
-(def slide-1
+(def intro
   [:section
    [:section
     [:h2 "REPL Eases Programmer Lives"]
@@ -21,7 +21,7 @@
    [:section
     [:h2 "Self-Introduction"]]])
    
-(def slide-2
+(def live-coding
   [:section
    [:section
     [:h2 "Finding duplicates"]
@@ -31,7 +31,7 @@
     [:footer.attribution "Names lifted from " [:a {:href "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"}
                                                "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"]]]])
 
-(def slide-3
+(def context-establishment
   [:section
    [:section
     [:h2 "Useful Libs"]
@@ -48,11 +48,11 @@
                          (:require [cheshire.core :as json]
                                    [clj-http.client :as http]
                                    [medley.core :as medley])))]]]])
-
-(def slide-4
+   
+(def endpoint-performance
   [:section
    [:section
-    [:h2 "Case Study 0"]
+    [:h2 "Case Study"]
     [:p "Endpoint Performance"]]
    [:section
     [:pre.stretch {:style "font-size: .42em;"}
@@ -65,28 +65,28 @@
     [:h4 "Similar Applications"]
     [:ul
      [:li "Regression testing"
-      [:span.fragment " ("
+      [:span " ("
        [:a {:href "https://clojuredocs.org/clojure.data/diff"} "clojure.data/diff"]
        ")"]]
      [:li "Stress testing"
-      [:span.fragment " (" [:a {:href "https://github.com/TheClimateCorporation/claypoole"} "claypoole"]
+      [:span " (" [:a {:href "https://github.com/TheClimateCorporation/claypoole"} "claypoole"]
        ")"]]
      [:li "Smoke testing"]]]])
      
-(def slide-5
+(def legacy-client
   [:section
    [:section
-    [:h2 "Case Study 1"]
+    [:h2 "Case Study"]
     [:p "Legacy Java Client"]]
    [:section
     [:pre.stretch {:style "font-size: .42em;"}
      [:code {:data-line-numbers ""}
       (slurp-resource "examples/java_client.clj")]]]])
 
-(def slide-6
+(def endpoint-scrape
   [:section
    [:section
-    [:h2 "Case Study 2"]
+    [:h2 "Case Study"]
     [:p "Endpoint Scraping"]]
    [:section
     [:pre.stretch {:style "font-size: .42em;"}
@@ -105,9 +105,9 @@
     [:h2 "Additional Resources"]
     [:ul
      [:li [:a {:href "https://www.youtube.com/watch?v=Qx0-pViyIDU"} "Running with Scissors by Stuart Halloway"]]
-     [:li [:a {:href "https://github.com/den1k/zeal"} "Zeal"] " (REPL meets clipboard manager)"]
      [:li [:a {:href "https://www.braveclojure.com"} "Clojure for the Brave and True"]]
-     [:li [:a {:href "https://www.reddit.com/r/Clojure/"} "/r/Clojure"]]]]
+     [:li [:a {:href "https://www.reddit.com/r/Clojure/"} "/r/Clojure"]]
+     [:li [:a {:href "https://github.com/den1k/zeal"} "Zeal"] " (REPL meets clipboard manager)"]]]
    [:section
     [:h2 "Questions?"]
     [:footer.attribution
@@ -120,10 +120,10 @@
 (defn all
   "Add here all slides you want to see in your presentation."
   []
-  [slide-1
-   slide-2
-   slide-3
-   slide-4
-   slide-5
-   slide-6
+  [intro
+   live-coding
+   context-establishment
+   endpoint-performance
+   legacy-client
+   endpoint-scrape
    conclusion])
