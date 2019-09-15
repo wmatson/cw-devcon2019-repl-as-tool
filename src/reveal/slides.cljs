@@ -34,6 +34,12 @@
 (def context-establishment
   [:section
    [:section
+    [:h2 "Scratchpad Projects"]
+    [:ul
+     [:li.fragment "Why"]
+     [:li.fragment "Directory Structure"]
+     [:li.fragment "Why Clojure?"]]]
+   [:section
     [:h2 "Useful Libs"]
     [:ul
      [:li [:a {:href "https://github.com/weavejester/medley"} "weavejester/medley"]]
@@ -48,6 +54,7 @@
                          (:require [cheshire.core :as json]
                                    [clj-http.client :as http]
                                    [medley.core :as medley])))]]]])
+     
    
 (def endpoint-performance
   [:section
