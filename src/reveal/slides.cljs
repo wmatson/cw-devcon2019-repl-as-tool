@@ -14,9 +14,12 @@
 
 (def slide-1
   [:section
-   [:h2 "REPL Eases Programmer Lives"]
-   [:h5 "Wesley Matson"]
-   [:footer.attribution "Clearwater Developer Conference 2019"]])
+   [:section
+    [:h2 "REPL Eases Programmer Lives"]
+    [:h5 "Wesley Matson"]
+    [:footer.attribution "Clearwater Developer Conference 2019"]]
+   [:section
+    [:h2 "Self-Introduction"]]])
    
 (def slide-2
   [:section
@@ -49,7 +52,7 @@
 (def slide-4
   [:section
    [:section
-    [:h2 "A Case Study"]
+    [:h2 "Case Study 0"]
     [:p "Endpoint Performance"]]
    [:section
     [:pre.stretch {:style "font-size: .42em;"}
@@ -57,13 +60,70 @@
       (slurp-resource "examples/endpoint-performance.clj")]]]
    [:section
     [:pre {:style "font-size: .31em; width: 100%;"}
-     [:code (slurp-resource "examples/endpoint-performance-output.txt")]]]])
-               
- 
+     [:code (slurp-resource "examples/endpoint-performance-output.txt")]]]
+   [:section
+    [:h4 "Similar Applications"]
+    [:ul
+     [:li "Regression testing"
+      [:span.fragment " ("
+       [:a {:href "https://clojuredocs.org/clojure.data/diff"} "clojure.data/diff"]
+       ")"]]
+     [:li "Stress testing"
+      [:span.fragment " (" [:a {:href "https://github.com/TheClimateCorporation/claypoole"} "claypoole"]
+       ")"]]
+     [:li "Smoke testing"]]]])
+     
+(def slide-5
+  [:section
+   [:section
+    [:h2 "Case Study 1"]
+    [:p "Legacy Java Client"]]
+   [:section
+    [:pre.stretch {:style "font-size: .42em;"}
+     [:code {:data-line-numbers ""}
+      (slurp-resource "examples/java_client.clj")]]]])
+
+(def slide-6
+  [:section
+   [:section
+    [:h2 "Case Study 2"]
+    [:p "Endpoint Scraping"]]
+   [:section
+    [:pre.stretch {:style "font-size: .42em;"}
+     [:code {:data-line-numbers ""}
+      (slurp-resource "examples/endpoint_scraping.clj")]]]
+   [:section
+    [:h4 "Similar Applications"]
+    [:ul
+     [:li "Migrating between data models"]
+     [:li "Seeding " [:a {:href "https://cucumber.io/docs/guides/10-minute-tutorial/"} "cucumber"]
+      "ish tests"]]]])
+
+(def conclusion
+  [:section
+   [:section
+    [:h2 "Additional Resources"]
+    [:ul
+     [:li [:a {:href "https://www.youtube.com/watch?v=Qx0-pViyIDU"} "Running with Scissors by Stuart Halloway"]]
+     [:li [:a {:href "https://github.com/den1k/zeal"} "Zeal"] " (REPL meets clipboard manager)"]
+     [:li [:a {:href "https://www.braveclojure.com"} "Clojure for the Brave and True"]]
+     [:li [:a {:href "https://www.reddit.com/r/Clojure/"} "/r/Clojure"]]]]
+   [:section
+    [:h2 "Questions?"]
+    [:footer.attribution
+     [:div "Slides Source: " [:a {:href "https://github.com/wmatson/cw-devcon2019-repl-as-tool"} "https://github.com/wmatson/cw-devcon2019-repl-as-tool"]]
+     [:div "Created with "  [:a {:href "https://github.com/n2o/reveal-cljs"} "reveal-cljs"]
+      " and " [:a {:href "https://github.com/viebel/klipse"} "klipse"]]]]])
+     
+
+
 (defn all
   "Add here all slides you want to see in your presentation."
   []
   [slide-1
    slide-2
    slide-3
-   slide-4])
+   slide-4
+   slide-5
+   slide-6
+   conclusion])
