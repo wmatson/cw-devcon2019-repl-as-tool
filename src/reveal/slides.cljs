@@ -37,8 +37,15 @@
     [:h2 "Scratchpad Projects"]
     [:ul
      [:li.fragment "Why"]
-     [:li.fragment "Directory Structure"]
-     [:li.fragment "Why Clojure?"]]]
+     [:li.fragment "Why Clojure?"]
+     [:li.fragment
+      [:div "Directory Structure"]
+      [:pre 
+       "project.clj
+/src/&lt;project-name&gt;
+    /protos
+    /services
+    /one_offs"]]]]
    [:section
     [:h2 "Useful Libs"]
     [:ul
@@ -110,7 +117,10 @@
     [:li "Endpoint Scraping"]
     [:li "Migrating between data models"]
     [:li "Seeding " [:a {:href "https://cucumber.io/docs/guides/10-minute-tutorial/"} "cucumber"]
-     "ish tests"]]])
+     "ish tests"]
+    [:li "Admin Tools (e.g. "
+     [:a {:href "https://github.com/FundingCircle/jackdaw/blob/master/src/jackdaw/admin.clj"} "for Kafka"]
+     ") "]]])
 
 
 (def conclusion
@@ -140,4 +150,5 @@
    endpoint-performance
    diagnostic-watch
    legacy-client
+   other-cases
    conclusion])
