@@ -80,6 +80,19 @@
        ")"]]
      [:li "Smoke testing"]]]])
      
+(def diagnostic-watch
+  [:section
+   [:section
+    [:h2 "Case Study"]
+    [:p "Diagnostic Watching"]]
+   [:section
+    [:pre.stretch {:style "font-size: .35em;"}
+     [:code {:data-line-numbers ""}
+      (slurp-resource "examples/diagnostic_watch.clj")]]]
+   [:section
+    [:h3 "Diagnostic Watch Results"]
+    [:img.stretch {:src "img/diagnostic-results.png"}]]])
+    
 (def legacy-client
   [:section
    [:section
@@ -87,24 +100,18 @@
     [:p "Legacy Java Client"]]
    [:section
     [:pre.stretch {:style "font-size: .42em;"}
-     [:code {:data-line-numbers ""}
+     [:code.clojure {:data-line-numbers ""}
       (slurp-resource "examples/java_client.clj")]]]])
 
-(def endpoint-scrape
+(def other-cases
   [:section
-   [:section
-    [:h2 "Case Study"]
-    [:p "Endpoint Scraping"]]
-   [:section
-    [:pre.stretch {:style "font-size: .42em;"}
-     [:code {:data-line-numbers ""}
-      (slurp-resource "examples/endpoint_scraping.clj")]]]
-   [:section
-    [:h4 "Similar Applications"]
-    [:ul
-     [:li "Migrating between data models"]
-     [:li "Seeding " [:a {:href "https://cucumber.io/docs/guides/10-minute-tutorial/"} "cucumber"]
-      "ish tests"]]]])
+   [:h2 "Other Applications"]
+   [:ul
+    [:li "Endpoint Scraping"]
+    [:li "Migrating between data models"]
+    [:li "Seeding " [:a {:href "https://cucumber.io/docs/guides/10-minute-tutorial/"} "cucumber"]
+     "ish tests"]]])
+
 
 (def conclusion
   [:section
@@ -131,6 +138,6 @@
    live-coding
    context-establishment
    endpoint-performance
+   diagnostic-watch
    legacy-client
-   endpoint-scrape
    conclusion])

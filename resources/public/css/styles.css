@@ -1,3 +1,8 @@
 .attribution {
     font-size: 0.5em;
 }
+
+table.sql pre {
+    overflow: hidden;
+    width: 700px;
+}
