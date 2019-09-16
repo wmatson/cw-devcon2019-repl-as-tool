@@ -1,4 +1,4 @@
-(ns clj2018-scratchpad.one-offs.rawsp-request-size-profiling
+(ns scratchpad.one-offs.rawsp-request-size-profiling
   (:require [clj2018-scratchpad.rawsp.core :as rawsp]
             [clj2018-scratchpad.services.portfolio :as portfolio]
             [com.climate.claypoole :as cp]

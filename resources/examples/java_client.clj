@@ -1,4 +1,4 @@
-(ns clj2018-scratchpad.one-offs.fx-client
+(ns scratchpad.services.fx-client
   (:require [com.climate.claypoole :as cp])
   (:import [com.ca.fx.client FxClient]
            [com.ca.util.date GlobalDate GlobalDates]))

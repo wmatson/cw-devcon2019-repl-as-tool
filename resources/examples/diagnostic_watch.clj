@@ -1,4 +1,4 @@
-(ns clj2018-scratchpad.one-offs.diagnostic-endpoint-diagnostics
+(ns scratchpad.one-offs.przo-3223-diagnostic-endpoint-diagnostics
   (:require [clojure.java.jdbc :as jdbc]
             [clj-http.client :as http]
             [clojure.core.async :as async :refer [>! go <!]]
