@@ -18,7 +18,7 @@
 
 (comment
   ;;All accounts from PRC-3640
-  (let [account-ids [3 4 5 6 63 486 487 488 489 661 779 780 911 1401 3310 ,,,]]
+  (let [account-ids [3 1 4 15 9 2 6 53 89 79 ,,,]]
     (cp/upmap 20 #(get-rate % 4 1 "2018-09-04") account-ids))
 
-  (get-rate 168944 10 1 "2018-08-30"))
+  (get-rate 12345 10 1 "2018-08-30"))

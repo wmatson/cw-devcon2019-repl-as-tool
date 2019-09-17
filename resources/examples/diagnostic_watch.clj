@@ -6,14 +6,14 @@
 
 (def db-conn
   {:classname "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-   :connection-uri "jdbc:sqlserver://dev-pricing-db;database=Regression;integratedSecurity=true"})
+   :connection-uri "jdbc:sqlserver://dev-pricing-db;database=Scratchpad;integratedSecurity=true"})
 
 (defn get-most-recent []
   (-> (jdbc/query db-conn ["SELECT TOP 1 result FROM DiagnosticHits ORDER BY tsHit DESC"])
       first :result json/decode))
 
 (defn get-diags []
-  (:body (http/get "http://prod-boi-intake-prezo-app2:8084/prezo-ws/status/diagnostics"
+  (:body (http/get "http://production-prezo-host:8084/prezo-ws/status/diagnostics"
                    {:as :json-string-keys})))
 
 (defn- component-same [most-recent new component]

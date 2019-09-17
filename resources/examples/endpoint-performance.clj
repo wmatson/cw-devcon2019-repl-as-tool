@@ -1,5 +1,5 @@
 (ns scratchpad.one-offs.rawsp-request-size-profiling
-  (:require [clj2018-scratchpad.rawsp.core :as rawsp]
+  (:require [clj2018-scratchpad.services.raw-security-pricing :as rawsp]
             [clj2018-scratchpad.services.portfolio :as portfolio]
             [com.climate.claypoole :as cp]
             [taoensso.tufte :as tufte]))
@@ -24,8 +24,8 @@
 (tufte/profile {:dynamic? true}
   (dotimes [_ 20]
     (let [date "2019-05-15"
-          sec-ids (portfolio/get-securities {:account-ids [61191] :date date})
-          params {:date date :sec-ids sec-ids :source-ids [6 16 8 8 14 15 29 18]}]
+          sec-ids (portfolio/get-securities {:account-ids [314159] :date date})
+          params {:date date :sec-ids sec-ids :source-ids [6 16 8 8 14 15 29 18 ,,,]}]
       (= (large-request params)
          (partition-sec-ids params)
          (partition-src-ids params)))))

@@ -15,16 +15,21 @@
 (def intro
   [:section
    [:section
-    [:h2 "REPL Eases Programmer Lives"]
+    [:h2 "Coding Convenient Clojure Contraptions"]
     [:h5 "Wesley Matson"]
     [:footer.attribution "Clearwater Developer Conference 2019"]]
    [:section
-    [:h2 "Self-Introduction"]]])
+    [:h2 "Self-Introduction"]]
+   [:section
+    [:h2 "Agenda"]
+    [:ul [:li "TODO"]]]])
+;;TODO Clojure-usage challenges/solutions, adoption stuff
    
 (def live-coding
   [:section
    [:section
     [:h2 "Finding duplicates"]
+;;TODO duplicate IDs problem description
     (rk/klipse-snippet {:hidden-code `(do (def ~'data ~(vec ed/shuffled-data-with-duplicates))
                                           ~vm/medley)
                         :code 'data})
@@ -69,7 +74,7 @@
     [:h2 "Case Study"]
     [:p "Endpoint Performance"]]
    [:section
-    [:pre.stretch {:style "font-size: .42em;"}
+    [:pre.stretch {:style "font-size: .4em;"}
      [:code {:data-line-numbers ""}
       (slurp-resource "examples/endpoint-performance.clj")]]]
    [:section
@@ -93,7 +98,7 @@
     [:h2 "Case Study"]
     [:p "Diagnostic Watching"]]
    [:section
-    [:pre.stretch {:style "font-size: .35em;"}
+    [:pre.stretch {:style "font-size: .33em;"}
      [:code {:data-line-numbers ""}
       (slurp-resource "examples/diagnostic_watch.clj")]]]
    [:section

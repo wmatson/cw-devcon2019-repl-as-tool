@@ -1,4 +1,4 @@
-# REPL Eases Programmer Lives
+# Coding Convenient Clojure Contraptions
 #### Wesley Matson
 ##### Clearwater Developer Conference 2019
 
