@@ -21,6 +21,11 @@
                                               "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"]]
    [:p.fragment "Are there duplicate names?"]])
 
+;;TODO defs slide, include REPL
+;;Dial in audience better
+;;More Clojure-specifc vs Java and whatnot
+;;TODO biggify klipse
+
 (def intro
   [:section
    [:section
@@ -39,7 +44,8 @@
     [:ul
      [:li "Context"]
      [:li "Case Studies"]
-     [:li "Challenges"]]]])
+     [:li "Challenges"]]
+    [:p.fragment "Interrupt me!"]]])
 
 (def context-establishment
   [:section
@@ -55,7 +61,8 @@
 /src/&lt;project-name&gt;
     /protos
     /services
-    /one_offs"]]]]
+    /one_offs"]]
+     [:li.fragment "Share!"]]]
    [:section
     [:h2 "Useful Libs"]
     [:ul
@@ -144,7 +151,7 @@
     [:ul
      [:li "Call to authority"]
      [:li "Build something useful"]
-     [:li "Outlearn, outperform, and outteach"]]]])
+     [:li "Outlearn and outteach"]]]])
     
 (def conclusion
   [:section
@@ -155,6 +162,10 @@
      [:li [:a {:href "https://www.braveclojure.com"} "Clojure for the Brave and True"]]
      [:li [:a {:href "https://www.reddit.com/r/Clojure/"} "/r/Clojure"]]
      [:li [:a {:href "https://github.com/den1k/zeal"} "Zeal"] " (REPL meets clipboard manager)"]]]
+   [:section
+    [:h2 "Summing Up"]
+    [:p "Scratchpad projects augment teams"]
+    [:p "Clojure helps"]]
    [:section
     [:h2 "Questions?"]
     [:footer.attribution
