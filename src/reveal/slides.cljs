@@ -10,7 +10,16 @@
     (pp/with-pprint-dispatch
       pp/code-dispatch
       (pp/pprint quoted-code))))
-                 
+
+(def live-coding
+  [:section
+   [:p "There are duplicate IDs in this data!"]
+   (rk/klipse-snippet {:hidden-code `(do (def ~'data ~(vec ed/shuffled-data-with-duplicates))
+                                         ~vm/medley)
+                       :code 'data})
+   [:footer.attribution "Names lifted from " [:a {:href "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"}
+                                              "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"]]
+   [:p.fragment "Are there duplicate names?"]])
 
 (def intro
   [:section
@@ -19,29 +28,25 @@
     [:h5 "Wesley Matson"]
     [:footer.attribution "Clearwater Developer Conference 2019"]]
    [:section
-    [:h2 "Self-Introduction"]]
+    [:h2 "About Me"]
+    [:ul
+     [:li "~7 years Clearwater Tenure"]
+     [:li "35+ Programming Languages"]
+     [:li "Non-programming Hobbies"]]]
+   live-coding
    [:section
     [:h2 "Agenda"]
-    [:ul [:li "TODO"]]]])
-;;TODO Clojure-usage challenges/solutions, adoption stuff
-   
-(def live-coding
-  [:section
-   [:section
-    [:h2 "Finding duplicates"]
-;;TODO duplicate IDs problem description
-    (rk/klipse-snippet {:hidden-code `(do (def ~'data ~(vec ed/shuffled-data-with-duplicates))
-                                          ~vm/medley)
-                        :code 'data})
-    [:footer.attribution "Names lifted from " [:a {:href "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"}
-                                               "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"]]]])
+    [:ul
+     [:li "Context"]
+     [:li "Case Studies"]
+     [:li "Challenges"]]]])
 
 (def context-establishment
   [:section
    [:section
     [:h2 "Scratchpad Projects"]
     [:ul
-     [:li.fragment "Why"]
+     [:li.fragment "Why?"]
      [:li.fragment "Why Clojure?"]
      [:li.fragment
       [:div "Directory Structure"]
@@ -117,7 +122,7 @@
 
 (def other-cases
   [:section
-   [:h2 "Other Applications"]
+   [:h2 "Other Possibilities"]
    [:ul
     [:li "Endpoint Scraping"]
     [:li "Migrating between data models"]
@@ -127,7 +132,20 @@
      [:a {:href "https://github.com/FundingCircle/jackdaw/blob/master/src/jackdaw/admin.clj"} "for Kafka"]
      ") "]]])
 
-
+(def adoption-difficulties
+  [:section
+   [:section
+    [:h2 "Adoption Nontrivial"]
+    [:ul.fragment
+     [:li "Clojure Resistance"]
+     [:li "Tooling"]]]
+   [:section
+    [:h2 "Coping Strategies"]
+    [:ul
+     [:li "Call to authority"]
+     [:li "Build something useful"]
+     [:li "Outlearn, outperform, and outteach"]]]])
+    
 (def conclusion
   [:section
    [:section
@@ -144,16 +162,14 @@
      [:div "Created with "  [:a {:href "https://github.com/n2o/reveal-cljs"} "reveal-cljs"]
       " and " [:a {:href "https://github.com/viebel/klipse"} "klipse"]]]]])
      
-
-
 (defn all
   "Add here all slides you want to see in your presentation."
   []
   [intro
-   live-coding
    context-establishment
    endpoint-performance
    diagnostic-watch
    legacy-client
    other-cases
+   adoption-difficulties
    conclusion])
