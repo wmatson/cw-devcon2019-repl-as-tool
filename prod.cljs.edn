@@ -1,0 +1,3 @@
+{:main reveal.core
+ :optimizations :advanced
+ :externs ["externs.js"]}
