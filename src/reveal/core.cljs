@@ -10,9 +10,9 @@
                        :progress    true
                        :transition  "slide"                    ; e.g. none/fade/slide/convex/concave/zoom
                        :slideNumber false
-                       :dependencies [{:src "node_modules/reveal.js/plugin/notes/notes.js"
+                       :dependencies [{:src "node_deps/reveal/plugin/notes/notes.js"
                                        :async true}
-                                      {:src "node_modules/reveal.js/plugin/highlight/highlight.js"
+                                      {:src "node_deps/reveal/plugin/highlight/highlight.js"
                                        :async true}]}))
 
 ;; -----------------------------------------------------------------------------
