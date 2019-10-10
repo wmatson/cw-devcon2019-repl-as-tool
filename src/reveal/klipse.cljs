@@ -4,12 +4,13 @@
             [reveal.example-data :as ed]))
 
 (defn- code-html [hidden-quoted-code quoted-code]
-  (html [:div {:style "font-size: 11vh;"}
+  (html [:div {:style "font-size: 33px;"}
          [:pre {:hidden true}
           [:code.klipse (str hidden-quoted-code)]]
          [:pre [:code.klipse (str quoted-code)]]
          [:link {:rel "stylesheet" :type "text/css" :href "https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"}]
-         [:script "window.klipse_settings = {selector: '.klipse'};"]
+         [:script "window.klipse_settings = {selector: '.klipse',
+codemirror_options_in: {autoCloseBrackets: true}};"]
          [:script {:src "https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"}]]))
 
 (defn klipse-snippet

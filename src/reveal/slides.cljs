@@ -14,7 +14,8 @@
 (def live-coding
   [:section
    [:p "There are duplicate IDs in this data!"]
-   (rk/klipse-snippet {:hidden-code `(do (def ~'data ~(vec ed/shuffled-data-with-duplicates))
+   (rk/klipse-snippet {:height "400px"
+                       :hidden-code `(do (def ~'data ~(vec ed/shuffled-data-with-duplicates))
                                          ~vm/medley)
                        :code 'data})
    [:footer.attribution "Names lifted from " [:a {:href "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"}
