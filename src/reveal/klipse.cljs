@@ -4,7 +4,7 @@
             [reveal.example-data :as ed]))
 
 (defn- code-html [hidden-quoted-code quoted-code]
-  (html [:div
+  (html [:div {:style "font-size: 11vh;"}
          [:pre {:hidden true}
           [:code.klipse (str hidden-quoted-code)]]
          [:pre [:code.klipse (str quoted-code)]]

@@ -21,10 +21,8 @@
                                               "https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea"]]
    [:p.fragment "Are there duplicate names?"]])
 
-;;TODO defs slide, include REPL
 ;;Dial in audience better
 ;;More Clojure-specifc vs Java and whatnot
-;;TODO biggify klipse
 
 (def intro
   [:section
@@ -49,6 +47,11 @@
 
 (def context-establishment
   [:section
+   [:section
+    [:h2 "Definitions"]
+    [:ul
+     [:li "REPL"]
+     [:li "Scratchpad Project"]]]
    [:section
     [:h2 "Scratchpad Projects"]
     [:ul
