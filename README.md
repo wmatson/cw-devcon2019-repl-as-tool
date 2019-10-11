@@ -6,6 +6,8 @@ Despite breaking up our shared databases, we still have production issues that p
 
 I'll give a brief overview on the libraries I use to fight fires in production and explore the structure of good "scratchpad" projects. Much as you can save useful SQL scripts, you save Clojure ones. With a smidgen of forethought, the UI-less tools you've built for yourself can be partially reused in creating more standardized and sensible investigative tooling for operations.
 
+Compiled slides are accessible [here](https://wmatson.github.io/cw-devcon2019-repl-as-tool/)
+
 ----
 To Run in Dev Mode:
 `clj -m figwheel.main -b dev -r`
